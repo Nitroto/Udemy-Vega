@@ -1,9 +1,9 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
-
-namespace vega.Models
+﻿namespace vega.Models
 {
+    using System.Collections.ObjectModel;
+    using System.ComponentModel.DataAnnotations;
     using System.Collections.Generic;
+
 
     public class Make
     {

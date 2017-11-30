@@ -61,11 +61,14 @@
         <e p="HomeController.cs" t="Include" />
         <e p="MakesController.cs" t="Include" />
         <e p="Resources" t="Include">
+          <e p="ContactResource.cs" t="Include" />
           <e p="FeatureResource.cs" t="Include" />
           <e p="MakeResource.cs" t="Include" />
           <e p="ModelResource.cs" t="Include" />
+          <e p="VehicleResource.cs" t="Include" />
         </e>
         <e p="SampleDataController.cs" t="Include" />
+        <e p="VehiclesController.cs" t="Include" />
       </e>
       <e p="Mapping" t="Include">
         <e p="MappingProfile.cs" t="Include" />
@@ -81,12 +84,16 @@
         <e p="20171124091000_AddFeatureModel.cs" t="Include" />
         <e p="20171124091345_SeedFeaturesInDatabase.Designer.cs" t="Include" />
         <e p="20171124091345_SeedFeaturesInDatabase.cs" t="Include" />
+        <e p="20171129145232_AddVehicle.Designer.cs" t="Include" />
+        <e p="20171129145232_AddVehicle.cs" t="Include" />
         <e p="VegaDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
         <e p="Feature.cs" t="Include" />
         <e p="Make.cs" t="Include" />
         <e p="Model.cs" t="Include" />
+        <e p="Vehicle.cs" t="Include" />
+        <e p="VehicleFeature.cs" t="Include" />
       </e>
       <e p="Persistence" t="Include">
         <e p="VegaDbContext.cs" t="Include" />
