@@ -1,11 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
 namespace vega.Controllers
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
@@ -34,10 +33,7 @@ namespace vega.Controllers
 
             public int TemperatureF
             {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
+                get { return 32 + (int) (TemperatureC / 0.5556); }
             }
         }
     }

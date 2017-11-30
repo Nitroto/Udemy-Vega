@@ -1,4 +1,4 @@
-﻿namespace vega.Models
+﻿namespace vega.Core.Models
 {
     using System;
     using System.Collections.Generic;
@@ -23,6 +23,7 @@
         [StringLength(255)]
         public string ContactPhone { get; set; }
 
+        [StringLength(255)]
         public string ContactEmail { get; set; }
 
         public DateTime LastUpdate { get; set; }

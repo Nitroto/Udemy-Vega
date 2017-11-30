@@ -1,14 +1,13 @@
-﻿using AutoMapper;
-using vega.Controllers.Resources;
-
-namespace vega.Controllers
+﻿namespace vega.Controllers
 {
     using System.Threading.Tasks;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
-    using Models;
+    using AutoMapper;
     using Persistence;
+    using Resources;
+    using Core.Models;
 
     public class MakesController : Controller
     {

@@ -1,4 +1,4 @@
-﻿namespace vega.Models
+﻿namespace vega.Core.Models
 {
     using System.ComponentModel.DataAnnotations.Schema;
 

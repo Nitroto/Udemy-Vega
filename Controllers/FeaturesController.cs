@@ -1,14 +1,14 @@
 ﻿namespace vega.Controllers
 {
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
     using AutoMapper;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using Core.Models;
     using Resources;
-    using Models;
     using Persistence;
-    
+
     public class FeaturesController : Controller
     {
         private readonly VegaDbContext _context;
@@ -22,11 +22,11 @@
 
         // GET
         [HttpGet("/api/features")]
-        public async Task<IEnumerable<FeatureResource>> GetFeatures()
+        public async Task<IEnumerable<KeyValuePairResource>> GetFeatures()
         {
             var features = await _context.Features.ToListAsync();
 
-            return _mapper.Map<List<Feature>, List<FeatureResource>>(features);
+            return _mapper.Map<List<Feature>, List<KeyValuePairResource>>(features);
         }
     }
 }
