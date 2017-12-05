@@ -28,7 +28,7 @@ namespace vega
         {
             services.AddScoped<IVehicleRepository, VehicleRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            
+
             services.AddAutoMapper();
 
             services.AddDbContext<VegaDbContext>(options =>
@@ -62,7 +62,7 @@ namespace vega
 
                 routes.MapSpaFallbackRoute(
                     name: "spa-fallback",
-                    defaults: new {controller = "Home", action = "Index"});
+                    defaults: new { controller = "Home", action = "Index" });
             });
         }
     }
