@@ -116,7 +116,7 @@ export class VehicleFormComponent implements OnInit {
                 .subscribe(x => {
                     this._toastyService.success({
                         title: 'Success',
-                        msg: 'This vehicle was sucessfully updated.',
+                        msg: 'This vehicle was sucessfully deleted.',
                         theme: 'bootstrap',
                         showClose: true,
                         timeout: 5000
