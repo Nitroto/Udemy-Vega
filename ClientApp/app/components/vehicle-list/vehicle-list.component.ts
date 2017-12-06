@@ -48,7 +48,7 @@ export class VehicleListComponent implements OnInit {
             page: 1,
             pageSize: this.PAGE_SIZE
         };
-        this.onFilterChange();
+        this.populateVehicles();
     }
 
     sortBy(columnName) {
