@@ -1,6 +1,7 @@
 ﻿namespace vega.Controllers
 {
     using System;
+    using System.Collections.Generic;
     using Microsoft.AspNetCore.Mvc;
     using System.Threading.Tasks;
     using AutoMapper;
@@ -25,7 +26,6 @@
         [HttpPost]
         public async Task<IActionResult> CreateVehicle([FromBody] SaveVehicleResource saveVehicleResource)
         {
-            throw new Exception();
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -90,5 +90,17 @@
 
             return Ok(vehicleResource);
         }
+
+        [HttpGet]
+        public async Task<QueryResultResource<VehicleResource>> GetVehicles(VehicleQueryResource fileResult)
+        {
+            var filter = _mapper.Map<VehicleQueryResource, VehicleQuery>(fileResult);
+            var queryResult = await _repository.GetVehicles(filter);
+
+            return _mapper.Map<QueryResult<Vehicle>, QueryResultResource<VehicleResource>>(queryResult);
+        }
     }
+
+
+
 }
