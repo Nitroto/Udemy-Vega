@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./vehicle-list.component.css']
 })
 export class VehicleListComponent implements OnInit {
-    private readonly PAGE_SIZE = 3 
-    
-    queryResult: any ={};
+    private readonly PAGE_SIZE = 3
+
+    queryResult: any = {};
     makes: KeyValuePair[];
     query: any = {
         pageSize: this.PAGE_SIZE
@@ -28,7 +28,7 @@ export class VehicleListComponent implements OnInit {
 
     ngOnInit() {
         this._vehicleService.getMakes()
-            .subscribe(makes => this.makes = makes)
+            .subscribe(makes => this.makes = makes);
 
         this.populateVehicles();
     }
