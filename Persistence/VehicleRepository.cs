@@ -79,8 +79,8 @@ namespace vega.Persistence
 
             result.TotalItems = await query.CountAsync();
 
-            query = query.ApplyPaging(queryObj);      
-                  
+            query = query.ApplyPaging(queryObj);
+
             result.Items = await query.ToListAsync();
 
             return result;

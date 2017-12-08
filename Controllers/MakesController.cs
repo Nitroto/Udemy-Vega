@@ -16,17 +16,17 @@
 
         public MakesController(VegaDbContext context, IMapper mapper)
         {
-            _context = context;
-            _mapper = mapper;
+            this._context = context;
+            this._mapper = mapper;
         }
 
         // GET
         [HttpGet("/api/makes")]
         public async Task<IEnumerable<MakeResource>> GetMakes()
         {
-            var makes = await _context.Makes.Include(m => m.Models).ToListAsync();
+            var makes = await this._context.Makes.Include(m => m.Models).ToListAsync();
 
-            return _mapper.Map<List<Make>, List<MakeResource>>(makes);
+            return this._mapper.Map<List<Make>, List<MakeResource>>(makes);
         }
     }
 }
